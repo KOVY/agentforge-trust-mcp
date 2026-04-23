@@ -1,0 +1,61 @@
+{
+  "name": "agentforge-trust-mcp",
+  "version": "0.1.1",
+  "description": "MCP server exposing AgentForge Trust Score audit tools — check trust, evaluate policies, list trusted servers, and recommend MCP tools for AI agents.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "agentforge-trust-mcp": "./dist/index.js"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "agentforge",
+    "trust",
+    "trust-score",
+    "security",
+    "audit",
+    "ai-agents",
+    "llm-tools",
+    "claude",
+    "anthropic",
+    "eu-compliance",
+    "gdpr"
+  ],
+  "author": "AgentForge <hello@agentforge.community> (https://agentforge.community)",
+  "license": "MIT",
+  "homepage": "https://agentforge.community/trust",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KOVY/agentforge-trust-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KOVY/agentforge-trust-mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
