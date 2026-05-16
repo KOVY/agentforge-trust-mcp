@@ -1,7 +1,7 @@
 {
   "name": "agentforge-trust-mcp",
-  "version": "0.1.1",
-  "description": "MCP server exposing AgentForge Trust Score audit tools — check trust, evaluate policies, list trusted servers, and recommend MCP tools for AI agents.",
+  "version": "0.3.0",
+  "description": "MCP server for AgentForge — trust audit (check_trust, evaluate_policy, list_trusted, recommend) plus action tools (discover, broadcast_search, call_tool, register_agent) so any agent can find and use 100+ MCP servers in one connection.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
@@ -40,10 +40,11 @@
   "homepage": "https://agentforge.community/trust",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KOVY/agentforge-trust-mcp.git"
+    "url": "git+https://github.com/KOVY/agent-hub.git",
+    "directory": "packages/mcp-trust-server"
   },
   "bugs": {
-    "url": "https://github.com/KOVY/agentforge-trust-mcp/issues"
+    "url": "https://github.com/KOVY/agent-hub/issues"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0"
