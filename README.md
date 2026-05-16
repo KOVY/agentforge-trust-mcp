@@ -1,5 +1,10 @@
 # agentforge-trust-mcp
 
+[![npm version](https://img.shields.io/npm/v/agentforge-trust-mcp.svg)](https://www.npmjs.com/package/agentforge-trust-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/agentforge-trust-mcp.svg)](https://www.npmjs.com/package/agentforge-trust-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![MCP](https://img.shields.io/badge/MCP-server-purple.svg)](https://modelcontextprotocol.io)
+
 **One MCP connection → 100+ MCP servers, with trust audit, discovery, and execution.**
 
 AgentForge gives any agent a single connection that exposes the entire
@@ -7,8 +12,9 @@ catalog of MCP servers — trust-scored, searchable, and executable. Trust
 Scores (0–100) are computed across five dimensions: code health, security
 scan, behavioral audit, community trust, and EU compliance.
 
-`v0.2.0` ships **8 tools**: 4 trust tools (audit before connecting) +
-4 action tools (discover, broadcast across servers, execute, self-register).
+`v0.3.0` ships **8 tools** (4 trust + 4 action) plus a **P0 RCE sanitization
+layer** (input validation, call guards, anomaly detection) with **27/27
+tests passing** and **zero external runtime dependencies**.
 
 > 📖 **Full integration guide for external multi-agent systems:**
 > See [agentforge.community/trust](https://agentforge.community/trust) for the full integration guide
