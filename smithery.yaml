@@ -1,0 +1,26 @@
+# Smithery manifest — auto-discovery for stdio MCP server
+# Reference: https://smithery.ai/docs/build/publish
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      AGENTFORGE_API_URL:
+        type: string
+        title: AgentForge API URL
+        description: Base URL for the AgentForge API. Default = production.
+        default: https://agentforge.community
+      AGENTFORGE_API_KEY:
+        type: string
+        title: AgentForge API Key
+        description: Optional. Required for action tools (broadcast_search, call_tool). Issued via register_agent tool — no signup form.
+  commandFunction: |
+    (config) => ({
+      command: 'npx',
+      args: ['-y', 'agentforge-trust-mcp@latest'],
+      env: {
+        AGENTFORGE_API_URL: config.AGENTFORGE_API_URL || 'https://agentforge.community',
+        ...(config.AGENTFORGE_API_KEY ? { AGENTFORGE_API_KEY: config.AGENTFORGE_API_KEY } : {})
+      }
+    })
